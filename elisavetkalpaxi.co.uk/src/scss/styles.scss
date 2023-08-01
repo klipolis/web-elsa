@@ -1,0 +1,237 @@
+// 
+// Styles
+// 
+
+// Import custom variables and override default Bootstrap variables
+@import "./variables.scss";
+
+// Import Bootstrap
+// @import "bootstrap/scss/bootstrap.scss";
+
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: false;
+$enable-shadows: false;
+
+// Customize some defaults
+$body-color: #000;
+$body-bg: #fff;
+$border-radius: .4rem;
+
+// Theme colors
+
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+
+
+
+
+// Theme colors
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+);
+
+
+// $color1: #ff4a25;
+// $color2: #f3e231;
+// $color3: #36bf36;
+// $color4: #25a1ff;
+
+// // Add a custom color to $theme-colors
+// $custom-colors: (
+//     "color1":  $color1,
+//     "color2":  $color2,
+//     "color3":  $color3,
+//     "color4":  $color4
+// );
+
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+
+
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar";
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/offcanvas";
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+// Only use the utilities we need
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-get-multiple(
+  $utilities,
+  (
+    "align",
+    "float",
+    "object-fit",
+    "opacity",
+    // "overflow",
+    // "overflow-x",
+    // "overflow-y",
+    "display",
+    // "shadow",
+    // "focus-ring",
+    // "position",
+    "top",
+    // "bottom",
+    "start",
+    "end",
+    // "translate-middle",
+    "border",
+    "border-top",
+    "border-end",
+    "border-bottom",
+    "border-start",
+    "border-color",
+    // "subtle-border-color",
+    "border-width",
+    "border-opacity",
+    "width",
+    "max-width",
+    // "viewport-width",
+    // "min-viewport-width",
+    "height",
+    // "max-height",
+    // "viewport-height",
+    // "min-viewport-height",
+    "flex",
+    "flex-direction",
+    // "flex-grow",
+    // "flex-shrink",
+    "flex-wrap",
+    "justify-content",
+    "align-items",
+    "align-content",
+    "align-self",
+    // "order",
+    "margin",
+    "margin-x",
+    "margin-y",
+    "margin-top",
+    "margin-end",
+    "margin-bottom",
+    "margin-start",
+    // "negative-margin",
+    // "negative-margin-x",
+    // "negative-margin-y",
+    // "negative-margin-top",
+    // "negative-margin-end",
+    // "negative-margin-bottom",
+    // "negative-margin-start",
+    "padding",
+    "padding-x",
+    "padding-y",
+    "padding-top",
+    "padding-end",
+    "padding-bottom",
+    "padding-start",
+    "gap",
+    "row-gap",
+    "column-gap",
+    "font-family",
+    "font-size",
+    "font-style",
+    "font-weight",
+    "line-height",
+    "text-align",
+    "text-decoration",
+    "text-transform",
+    "white-space",
+    "word-wrap",
+    "color",
+    "text-opacity",
+    "text-color",
+    "link-opacity",
+    // "link-offset",
+    "link-underline",
+    "link-underline-opacity",
+    // "background-color",
+    "bg-opacity",
+    // "subtle-background-color",
+    // "gradient",
+    // "user-select",
+    "pointer-events",
+    // "rounded",
+    // "rounded-top",
+    // "rounded-end",
+    // "rounded-bottom",
+    // "rounded-start",
+    // "visibility",
+    // "z-index",
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+
+
+// Import custom styles
+@import "./global.scss";
+
+// Components
+@import "./components/buttons.scss";
+@import "./components/dividers.scss";
+
+// Sections
+@import "./sections/nav.scss";
