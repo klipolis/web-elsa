@@ -1,25 +1,25 @@
-//- title Archive - Elisavet Kalpaxi
 extends templates/page-template.pug
 
-block html-title
+prepend html-title
 
     - var var_title = "Archive"
     - var var_color = "yellow"
 
-    title 
-        = var_title
-        |  Elisavet Kalpaxi
-
+    var_title + ' - '
 
 block main-content
 
-    // Contact
     .container-md
         .row.gx-5.align-items-center
+
             .col-lg-6.col-md-6
+
                 img.img-fluid(src='assets/img/archive.png', alt='...')
 
             .col-lg-6.col-md-6
+
                 p.h4.fw-bold.text-center 
-                    a(href='archive.html') www.elisavetkalpaxi.co.uk/archive.html
+                    a(href='archive/') www.elisavetkalpaxi.co.uk/archive.html
+
                 p This is the website that I used until 2014 and presents work and links to projects that were completed up to that point. The website was designed back in 2005 when (Macromedia) Flash was still cutting edge in creating interactive material and animations. The website required the use of elaborate techniques to create slideshows, fiddly operations in chaotic timelines to be updated, and unfortunately it is no longer functional as most platforms, including tablets and mobile phones, have stoped supporting Flash. However, with the potential that Flash may return in the future, I decided to keep it as an archive that offers access to my earlier work and this website's subconscious technological past that has now become obsolete. Flash content can now be accessed with the use of Flash emulators.
+

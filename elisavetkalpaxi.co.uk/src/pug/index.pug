@@ -10,7 +10,10 @@ block main-content
             - var colors = ['red','yellow','green','blue']
 
             each value, index in pages
-                a.text-decoration-none.h1.font-monospace.strike(href=links[index] style='color: var(--bs-'+colors[index]+')' title=value) 
+                a.text-decoration-none.h1.font-monospace.strike(
+                    href=links[index] style='color: var(--bs-'+colors[index]+')' 
+                    title=value
+                ) 
                     = value
     
             .text-center.small.text-muted Copyright &copy; 2023 - Elisavet Kalpaxi
