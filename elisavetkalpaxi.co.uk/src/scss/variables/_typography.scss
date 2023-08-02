@@ -11,14 +11,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Just My Type';
-    src: url('/assets/font/JustMyType.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 
 $font-family-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -42,19 +34,3 @@ $font-size-base:              0.9rem; // Assumes the browser default, typically 
 $line-height-base:            1.7;
 $line-height-sm:              1.25;
 $line-height-lg:              2;
-
-// Header font
-@font-face {
-    font-family: 'Just My Type';
-    src: url('subset-JustMyType.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Just My Type';
-    src: url('subset-JustMyType.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
