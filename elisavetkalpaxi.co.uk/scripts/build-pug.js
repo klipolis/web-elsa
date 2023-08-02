@@ -13,12 +13,12 @@ const files = sh.find('./src/pug/').filter(function(file) { return file.match(/.
 files.forEach(_processFile);
 
 function _processFile(filePath) {
-    // if (
-    //     filePath.match(/\.pug$/)
-    //     && !filePath.match(/include/)
-    //     && !filePath.match(/mixin/)
-    //     && !filePath.match(/\/pug\/layouts\//)
-    // ) {
+    if (
+        filePath.match(/\.pug$/)
+        && !filePath.match(/partials/)
+        && !filePath.match(/mixin/)
+        && !filePath.match(/\/pug\/templates\//)
+    ) {
         renderPug(filePath);
-    // }
+    }
 }

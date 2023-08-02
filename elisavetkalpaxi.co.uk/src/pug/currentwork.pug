@@ -1,139 +1,54 @@
-doctype html
-html(lang='en')
+extends templates/page-template.pug
 
-    head
+block html-title
 
-        meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        
-        meta(name='author', content='')
-        meta(name='keywords' content='Elisavet Kalpaxi, Elisavet, Elsa, Elsa Kalpaxi, Kalpaxi, photography, art, self-portait, goldsmiths, university of london, university, london, uk, photos, portfolio, black, white, b/w, fine art, portrait, ww gallery, lightpainting, instalation, contemporary art, practice, self-representation, self-image, image, icon, eikona, icona, windmill residency, art photography, Northampton, research, chisenhale, technh, exhibition, gallery, woven')
-        meta(name='keywords' content='Elisavet Kalpaxi, photography, self-portraits, Goldsmiths, Art, narcissism, self-portraiture, Elsa Kalpaxi, Greece, photogram, narrativity')
-        meta(http-equiv='Pragma' content='no-cache')
-        meta(http-equiv='Expires' content='-1')
-        title Current Work - Elisavet Kalpaxi
+    - var var_title = "Current Work"
+    - var var_color = "red"
 
-        // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+    title 
+        = var_title
+        |  Elisavet Kalpaxi
 
-        // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700', rel='stylesheet')
-        link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic', rel='stylesheet', type='text/css')
+block main-content
 
-        // SimpleLightbox plugin CSS
-        link(href='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css', rel='stylesheet')
-
-        // Core theme CSS (includes Bootstrap)
-        //- link(rel='preload' href='assets/font/JustMyType.woff2' as='font' type="font/woff2" crossorigin="anonymous")
-        link(href='css/styles.css', rel='stylesheet')
-
-    body#page-top
-
-        // Masthead
-        header
-            .container-fluid.py-5.px-0.mb-5
-                .col.text-center.text-uppercase
-                    h1.font-monospace.strike(style='color:var(--bs-red)' title="Current Work") Current Work
-
-       
-        // Main
-        .container-md
+    .container-md
             .row.g-4.gx-lg-5
-                // Nav
-                #nav.col-lg-2.col-md-12.col.text-uppercase.fw-bold
+                
+                .col.col-sm-12.mt-0
 
-                   ul.list-group.flex-lg-column.flex-row.list-group-flush.border-dark.border-end.border-2
-                        li.list-group-item
-                            a.text-decoration-none(href='/' title='') Home
-                        li.list-group-item.action
-                            a.text-decoration-none.text-reset(href='currentwork.html' title='') Current Work
-                        li.list-group-item
-                            a.text-decoration-none(href='archivelink.html' title='') Archive
-                        li.list-group-item
-                            a.text-decoration-none(href='about.html' title='') About
-                        li.list-group-item
-                            a.text-decoration-none(href='contact.html' title='') Contact
-
-                .col-lg-10.col-sm-12
-                                
-                    // Home
-                    section#home.container-md
-                            .row.g-4.gx-lg-5
-                                
-                                .col.col-sm-12.mt-0
-
-                                    img(src='assets/img/DialoguesLogo.png', alt='...', style='max-width:350px')
+                    img(src='assets/img/DialoguesLogo.png', alt='...', style='max-width:350px')
 
 
-                                    h2.h4 Dialogues: A Hybrid Art Project 
-            
-                                    a.text-reset.text-decoration-none(href='https://dialogueshybridartproject.com/', title='') https://dialogueshybridartproject.com
+                    h2.h4 Dialogues: A Hybrid Art Project 
 
-                                .col-lg-7.col-md-8.col-sm-12
-                                    
-                                    p Dialogues: A Hybrid Art Project is based on the exploration of hybrid spaces of exchange and art interventions that blend physical and virtual realities in new configurations. The project promotes notions of connectivity via art and interactions that blend private/public conceptions of space. 
+                    a.text-reset.text-decoration-none(href='https://dialogueshybridartproject.com/', title='') https://dialogueshybridartproject.com
 
-                                    p The first round of ‘Dialogues’ in July 2022, curated by Elisavet Kalpaxi with the valuable help of Konstantinos Panapakidis, sought to instigate a dialogue between eight artists. The participating artist exchanged artworks and installed them in their personal spaces for a period of 10 days. During that period the artworks were publicly available on this site through relevant documentation and live streaming events (Dialogues #1). 
-
-                                    p Alongside the virtual exhibition, the project involved a series of discussions between the artists to enable further interactions and reflections. Part of this, was the decision to invite more artists to form their own rounds of dialogues. We created an instructional booklet, our ‘formula’, which describes all the processes involved in making the project, and which can be found on the menu of this site. It is envisioned that some new rounds of Dialogues will be instigated in July every year, with a shared opening event. But the formula is available for appropriation according to the participants’ priorities.
-
-                                .col.col-md-4.col-sm-9
-                                    img.img-fluid.float-end(src='assets/img/DialoguesTheFormula.jpg', alt='...')
-
-
-                    // Portfolio
-                    section#portfolio.container-md
-                            
-                            h2.mt-5.h4 Into the Garden
-                            p Woven silver prints and thread, 42.5 x 42.5 cm. 
-
-                            .row.g-0.gallery
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_01_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_01_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_02_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_02_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_03_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_03_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_04_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_04_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_05_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_05_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_06_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_06_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_07_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_07_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_08_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_08_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_09_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_09_2014.jpg', alt='...')
-                                .col-xl-2.col-lg-3.col-md-4.col-6
-                                    a.thumbnail(href='assets/img/Kalpaxi_Into_the_Garden_10_2014.jpg', alt='...')
-                                        img.img-fluid(src='assets/img/Kalpaxi_Into_the_Garden_10_2014.jpg', alt='...')
-
-                            p.my-3 This is a series of woven images that I started working on in 2013. The idea draws on a work I completed a year earlier, the Cliff with Pine Trees triptych (see archive), which was meant to manually reproduce the polyphase effect of the black-and-white composite images that I was working on during that period. In these works instead of digitally composing the images, I am weaving strips from different images to bring different elements together. Weaving makes visible the image’s construction. It also links the image’s narrative to different traditions and forms of labour linked to mythologies of femininity.
+                .col-lg-7.col-md-8.col-sm-12
                     
+                    p Dialogues: A Hybrid Art Project is based on the exploration of hybrid spaces of exchange and art interventions that blend physical and virtual realities in new configurations. The project promotes notions of connectivity via art and interactions that blend private/public conceptions of space. 
 
-       
-        // Footer
-        footer.py-5
-            p.strike.font-monospace(style='color:var(--bs-red)' title="") 
-            p.text-center.small.text-muted Copyright &copy; 2023 - Elisavet Kalpaxi
+                    p The first round of ‘Dialogues’ in July 2022, curated by Elisavet Kalpaxi with the valuable help of Konstantinos Panapakidis, sought to instigate a dialogue between eight artists. The participating artist exchanged artworks and installed them in their personal spaces for a period of 10 days. During that period the artworks were publicly available on this site through relevant documentation and live streaming events (Dialogues #1). 
 
-        // Bootstrap core JS
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js')
+                    p Alongside the virtual exhibition, the project involved a series of discussions between the artists to enable further interactions and reflections. Part of this, was the decision to invite more artists to form their own rounds of dialogues. We created an instructional booklet, our ‘formula’, which describes all the processes involved in making the project, and which can be found on the menu of this site. It is envisioned that some new rounds of Dialogues will be instigated in July every year, with a shared opening event. But the formula is available for appropriation according to the participants’ priorities.
 
-        // SimpleLightbox plugin JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
+                .col.col-md-4.col-sm-9
+                    img.img-fluid.float-end(src='assets/img/DialoguesTheFormula.jpg', alt='...')
 
-        // Core theme JS
-        script(src='js/scripts.js')
+
+    // Portfolio
+    section#portfolio.container-md
+            
+            h2.mt-5.h4 Into the Garden
+            p Woven silver prints and thread, 42.5 x 42.5 cm. 
+
+            - var images = ['Kalpaxi_Into_the_Garden_01_2014.jpg','Kalpaxi_Into_the_Garden_02_2014.jpg','Kalpaxi_Into_the_Garden_03_2014.jpg','Kalpaxi_Into_the_Garden_04_2014.jpg','Kalpaxi_Into_the_Garden_05_2014.jpg','Kalpaxi_Into_the_Garden_06_2014.jpg','Kalpaxi_Into_the_Garden_07_2014.jpg','Kalpaxi_Into_the_Garden_08_2014.jpg','Kalpaxi_Into_the_Garden_09_2014.jpg','Kalpaxi_Into_the_Garden_10_2014.jpg'] 
+
+            .row.g-0.gallery
+
+                each value, index in images
+                    .col-xl-2.col-lg-3.col-md-4.col-6
+                        a.thumbnail(href='assets/img/'+value, alt='...')
+                            img.img-fluid(src='assets/img/'+value, alt='...')
+              
+            p.my-3 This is a series of woven images that I started working on in 2013. The idea draws on a work I completed a year earlier, the Cliff with Pine Trees triptych (see archive), which was meant to manually reproduce the polyphase effect of the black-and-white composite images that I was working on during that period. In these works instead of digitally composing the images, I am weaving strips from different images to bring different elements together. Weaving makes visible the image’s construction. It also links the image’s narrative to different traditions and forms of labour linked to mythologies of femininity.
+

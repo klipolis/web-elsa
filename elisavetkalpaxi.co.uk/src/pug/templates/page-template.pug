@@ -1,0 +1,37 @@
+//- Page template
+
+include ../partials/header.pug
+
+body#page-top
+
+    // Header
+    header
+        .container-fluid.py-5.px-0.mb-5
+            .col.text-center.text-uppercase
+                h1.font-monospace.strike(style='color:var(--bs-'+var_color+')' title=var_title) 
+                    = var_title
+
+    // Main
+    .container-md
+        .row.g-4.gx-lg-5
+
+            // Nav
+            .col-lg-2.col-md-12.col
+                include ../partials/nav.pug
+
+            .col-lg-10.col-sm-12
+                block main-content
+
+    
+    // Footer
+    footer.py-5
+        p.strike.font-monospace(style='color:var(--bs-'+var_color+')' title="") 
+        p.text-center.small.text-muted Copyright &copy; 2023 - Elisavet Kalpaxi
+
+    include ../partials/footer.pug
+
+    // SimpleLightbox plugin JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
+
+    // Core theme JS
+    script(src='js/scripts.js')

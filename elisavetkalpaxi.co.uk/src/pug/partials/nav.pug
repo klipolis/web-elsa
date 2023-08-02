@@ -1,0 +1,16 @@
+//- NAV
+
+- var page = ''
+- var links = ['/', 'currentwork.html','archivelink.html','about.html','contact.html']
+- var pages = ['Home', 'Current Work','Archive','About','Contact']
+- var colors = ['black', 'red','yellow','green','blue']
+
+#nav.text-uppercase.fw-bold
+
+    ul.list-group.flex-lg-column.flex-row.list-group-flush.border-dark.border-end.border-2
+    
+        each value, index in pages
+
+            li.list-group-item
+                a.text-decoration-none(href=links[index] title=value) 
+                    = value
