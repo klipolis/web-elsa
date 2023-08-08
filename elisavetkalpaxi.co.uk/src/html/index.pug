@@ -12,8 +12,9 @@ block main-content
             each value, index in pages
                 a.text-decoration-none.h1.font-monospace.strike(
                     href=links[index] style='color: var(--bs-'+colors[index]+')' 
-                    title=value
+                    data-title=value
                 ) 
-                    = value
+                    span 
+                        = value
     
             .text-center.small.text-muted &copy; Elisavet Kalpaxi 2023

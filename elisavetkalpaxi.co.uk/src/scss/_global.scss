@@ -28,11 +28,12 @@ ul li {
     margin-bottom: 1rem;
 }
 
-// strikethrough
+// strikethrough text
 .strike {
     position: relative;
     word-spacing: 0.2rem;
     letter-spacing: 0.5rem;
+    user-select: none;
 }
 
 .strike::before {
@@ -40,26 +41,46 @@ ul li {
     position: absolute;
     left: 0;
     top: 0;
-    height: 50%;
+    height: calc(50% + 0.1rem);
+    border-bottom: 0.25rem solid currentColor;
     width: 100%;
     background-color: var(--bs-body-bg);
     pointer-events: none; 
   }
 
 .strike:after {
-    content: attr(title);
+    content: attr(data-title);
     position: absolute;
     left: 0;
     top: -0.1rem;
-    height: calc(50% + 0.3rem);
-    border-bottom: 0.3rem solid currentColor;
     width: 100%;
+    height: 50%;
     color: inherit;
     overflow: hidden;
     padding-left: 9px;
     pointer-events: none; 
 }
 
-a.strike:hover {
-    color: var(--bs-link-hover-color) !important;
+a.strike span {
+    opacity: 0;
+}
+
+a.strike:before {
+    opacity: 1;
+}
+
+a.strike:after {
+    opacity: 0;
+}
+
+a.strike:hover span {
+    opacity: 1;
+}
+
+a.strike:hover:before {
+    opacity: 1;
+}
+
+a.strike:hover:after {
+    opacity: 1;
 }
