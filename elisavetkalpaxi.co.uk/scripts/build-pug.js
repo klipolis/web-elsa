@@ -4,7 +4,7 @@ const sh = require('shelljs');
 const renderPug = require('./render-pug');
 const srcPath = upath.resolve(upath.dirname(__filename), '../src');
 
-const files = sh.find('./src/pug/').filter(function(file) { return file.match(/.pug$/); });
+const files = sh.find('./src/html/').filter(function(file) { return file.match(/.pug$/); });
 
 files.forEach(_processFile);
 
@@ -13,7 +13,7 @@ function _processFile(filePath) {
         filePath.match(/\.pug$/)
         && !filePath.match(/partials/)
         && !filePath.match(/mixin/)
-        && !filePath.match(/\/pug\/templates\//)
+        && !filePath.match(/\/html\/templates\//)
     ) {
         renderPug(filePath);
     }
