@@ -1,9 +1,11 @@
 //- Frontpage template
 
-include ../partials/header.pug
+extends ../partials/header.pug
 
-body#page-top
+block html-body
 
-    block main-content
+    body#page-top
 
-    include ../partials/footer.pug
+        block main-content
+
+        include ../partials/footer.pug

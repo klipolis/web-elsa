@@ -1,46 +1,46 @@
 //- Page template
 
-include ../partials/header.pug
+extends ../partials/header.pug
 
 block head-content
     
     //- SimpleLightbox plugin CSS
     link(href='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css', rel='stylesheet')
 
+block html-body
 
+    body#page-top
 
-body#page-top
+        //- Header
+        header
+            .container-fluid.py-5.px-0.mb-5
+                .col.text-center.text-uppercase
+                    h1.font-monospace.strike(style='color:var(--bs-'+var_color+')' data-title=var_title) 
+                        span 
+                            = var_title
 
-    //- Header
-    header
-        .container-fluid.py-5.px-0.mb-5
-            .col.text-center.text-uppercase
-                h1.font-monospace.strike(style='color:var(--bs-'+var_color+')' data-title=var_title) 
-                    span 
-                        = var_title
+        //- Main
+        .container-md
+            .row.g-4.gx-lg-5
 
-    //- Main
-    .container-md
-        .row.g-4.gx-lg-5
+                //- Nav
+                .col-lg-2.col-md-12.col
+                    include ../partials/nav.pug
 
-            //- Nav
-            .col-lg-2.col-md-12.col
-                include ../partials/nav.pug
+                .col-lg-10.col-sm-12
+                    block main-content
 
-            .col-lg-10.col-sm-12
-                block main-content
+        
+        //- Footer
+        footer.py-5
+            p.strike.font-monospace(style='color:var(--bs-' + var_color + ')' title='') 
+            p.text-center.small.text-muted 
+                |   &copy; Elisavet Kalpaxi 2023
 
-    
-    //- Footer
-    footer.py-5
-        p.strike.font-monospace(style='color:var(--bs-' + var_color + ')' title='') 
-        p.text-center.small.text-muted 
-            |   &copy; Elisavet Kalpaxi 2023
+        include ../partials/footer.pug
 
-    include ../partials/footer.pug
+        //- SimpleLightbox plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
 
-    //- SimpleLightbox plugin JS
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
-
-    //- Core theme JS
-    script(src='js/scripts.js')
+        //- Core theme JS
+        script(src='js/scripts.js')
