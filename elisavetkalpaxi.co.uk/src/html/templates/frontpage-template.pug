@@ -1,11 +1,13 @@
 //- Frontpage template
+doctype html
+html(lang='en')
 
-extends ../partials/header.pug
+    include ../partials/header.pug
 
-block html-body
+    block html-body
 
-    body#page-top
+        body#page-top
 
-        block main-content
+            block main-content
 
-        include ../partials/footer.pug
+            include ../partials/footer.pug
