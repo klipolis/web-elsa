@@ -89,6 +89,37 @@ $theme-colors: (
 // Helpers
 @import "bootstrap/scss/helpers";
 
+
+// Update utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    // Modify
+    "max-width": map-merge(
+      map-get($utilities, "max-width"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "max-width"), "values"),
+          (50: 50%, 75: 75%),
+        ),
+      ),
+    ),
+  
+    // Add new
+    "max-viewport-height": (
+      property: max-height,
+      class: max-vh,
+      responsive: true,
+      values: (
+        75: 75vh,
+        100: 100vh
+      )
+    )
+  )
+);
+
+
 // Utilities
 // Only use the utilities we need
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -97,15 +128,11 @@ $utilities: map-get-multiple(
   (
     "align",
     "float",
-    "object-fit",
+    // "object-fit",
     "opacity",
-    // "overflow",
-    // "overflow-x",
-    // "overflow-y",
     "display",
     // "shadow",
     // "focus-ring",
-    // "position",
     "top",
     // "bottom",
     "start",
@@ -117,14 +144,14 @@ $utilities: map-get-multiple(
     "border-bottom",
     "border-start",
     "border-color",
-    // "subtle-border-color",
     "border-width",
     "border-opacity",
     "width",
     "max-width",
     // "viewport-width",
     // "min-viewport-width",
-    "height",
+    // "height",
+    "max-viewport-height",
     // "max-height",
     // "viewport-height",
     // "min-viewport-height",
@@ -160,8 +187,8 @@ $utilities: map-get-multiple(
     "padding-bottom",
     "padding-start",
     "gap",
-    "row-gap",
-    "column-gap",
+    // "row-gap",
+    // "column-gap",
     "font-family",
     "font-size",
     "font-style",
@@ -170,17 +197,17 @@ $utilities: map-get-multiple(
     "text-align",
     "text-decoration",
     "text-transform",
-    "white-space",
+    // "white-space",
     "word-wrap",
     "color",
-    "text-opacity",
+    // "text-opacity",
     "text-color",
     "link-opacity",
     // "link-offset",
     "link-underline",
     "link-underline-opacity",
     // "background-color",
-    "bg-opacity",
+    // "bg-opacity",
     // "subtle-background-color",
     // "gradient",
     // "user-select",
