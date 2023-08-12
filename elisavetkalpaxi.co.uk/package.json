@@ -45,6 +45,7 @@
         "browser-sync": "^2.29.3",
         "chokidar": "^3.5.3",
         "concurrently": "^6.5.1",
+        "jstransformer-markdown-it": "^3.0.0",
         "postcss": "^8.4.27",
         "prettier": "^2.8.8",
         "pug": "^3.0.2",
