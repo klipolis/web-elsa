@@ -2,33 +2,17 @@
 // Colors
 // 
 
-//- Override and add to color system
-$orange: #771c03;
-$brown: #5c4d42;
-
-
-// $color1: #ff4a25;
-// $color2: #f3e231;
-// $color3: #36bf36;
-// $color4: #25a1ff;
-
-
+// Override and add to color system
 // scss-docs-start color-variables
-$blue:    #25a1ff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
+$orange: #771c03;
 $red:     #ff4a25 !default;
-$orange:  #fd7e14 !default;
 $yellow:  #f3e231 !default;
 $green:   #36bf36 !default;
-$teal:    #20c997 !default;
-$cyan:    #0dcaf0 !default;
+$blue:    #25a1ff !default;
 // scss-docs-end color-variables
 
-// - Override primary color
+// Override primary color
 $primary: $orange;
-
 
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
