@@ -49,18 +49,18 @@ append main-content
 
 
     // Portfolio
-    section#portfolio.container-md
+    .container-md.mt-5
             
-            h2.h3.mt-5 Into the Garden
+            h3 Into the Garden
             p Woven silver prints and thread, 42.5 x 42.5 cm. 
 
             - var files = ['Kalpaxi_Into_the_Garden_01_2014','Kalpaxi_Into_the_Garden_02_2014','Kalpaxi_Into_the_Garden_03_2014','Kalpaxi_Into_the_Garden_04_2014','Kalpaxi_Into_the_Garden_05_2014','Kalpaxi_Into_the_Garden_06_2014','Kalpaxi_Into_the_Garden_07_2014','Kalpaxi_Into_the_Garden_08_2014','Kalpaxi_Into_the_Garden_09_2014','Kalpaxi_Into_the_Garden_10_2014'] 
 
-            .row.row-cols-3.row-cols-lg-6.row-cols-md-5.g-3.mb-3.gallery
+            .row.gallery.g-1.g-sm-2.g-md-3.mb-3.justify-content-evenly.row-cols-3.row-cols-sm-auto
 
                 each value, index in files
-                    .col
-                        a.thumbnail(href='assets/img/'+value+'.jpg', alt='')
+                    .col-auto.mw-50
+                        a.thumbnail(href='assets/img/'+value+'.jpg', title='')
                             img.img-fluid(src='assets/img/'+value+'\_small.jpg', alt='')
               
             p This is a series of woven images that I started working on in 2013. The idea draws on a work I completed a year earlier, the Cliff with Pine Trees triptych (see archive), which was meant to manually reproduce the polyphase effect of the black-and-white composite images that I was working on during that period. In these works instead of digitally composing the images, I am weaving strips from different images to bring different elements together. Weaving makes visible the image’s construction. It also links the image’s narrative to different traditions and forms of labour linked to mythologies of femininity.
