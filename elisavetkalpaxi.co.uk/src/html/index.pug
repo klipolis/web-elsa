@@ -3,14 +3,14 @@ extends templates/frontpage-template.pug
 block main-content
 
     .container-fluid.h-100.py-5
-        .row.h-100.align-items-center.text-center.text-uppercase
+        .row.h-100.align-items-center.text-center
 
             - var pages = ['Current Work','Archive','About','Contact']
             - var links = ['currentwork.html','archivelink.html','about.html','contact.html']
             - var colors = ['red','yellow','green','blue']
 
             each value, index in pages
-                a.text-decoration-none.h1.font-monospace.strike(
+                a.display-4.text-decoration-none.text-uppercase.font-monospace.strike(
                     href=links[index] style='color: var(--bs-'+colors[index]+')' 
                     data-title=value
                 ) 
