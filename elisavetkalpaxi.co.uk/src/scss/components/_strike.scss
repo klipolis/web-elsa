@@ -45,16 +45,19 @@
     }
 }
 
-a.strike {
-    span,
-    &:after {
-        opacity: 0;
-    }
+.front-page {
 
-    &:before,
-    &:hover span,
-    &:hover:before,
-    &:hover:after {
-        opacity: 1;
+    a.strike {
+        span,
+        &:after {
+            opacity: 0;
+        }
+
+        &:before,
+        &:hover span,
+        &:hover:before,
+        &:hover:after {
+            opacity: 1;
+        }
     }
 }
