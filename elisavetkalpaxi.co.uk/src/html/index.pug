@@ -2,19 +2,19 @@ extends templates/frontpage-template.pug
 
 block main-content
 
-    .container-fluid.h-100.py-5
-        .row.h-100.align-items-center.text-center
+    .row.align-items-end.min-vh-100.g-0
 
-            - var pages = ['Current Work','Archive','About','Contact']
-            - var links = ['currentwork.html','archivelink.html','about.html','contact.html']
-            - var colors = ['red','yellow','green','blue']
+        - var pages = ['Current Work','Archive','About','Contact']
+        - var links = ['currentwork.html','archivelink.html','about.html','contact.html']
+        - var colors = ['red','yellow','green','blue']
 
-            each value, index in pages
-                a.display-4.text-decoration-none.text-uppercase.font-monospace.strike(
+        each value, index in pages
+            .col-12
+                a.strike(
                     href=links[index] style='color: var(--bs-'+colors[index]+')' 
                     data-title=value
                 ) 
                     span 
                         = value
-    
-            .text-center.small.text-muted &copy; Elisavet Kalpaxi 2023
+
+        .col-12.text-center.mb-5 &copy; Elisavet Kalpaxi 2023

@@ -2,18 +2,17 @@
 // Global
 // 
 
-// Scroll padding for all scroll targets on page used with
-// native CSS smooth scrolling
-// 
-// https://caniuse.com/?search=scroll-padding
-
 html {
     height: 100%;
+    min-height:100%;
+    background: rgb(230, 160, 160);
 }
 
 body {
-    width: 100%;
+    // width: 100%;
+    // border: 8px solid black;
     height: 100%;
+    min-height:100%;
     text-align:justify;
 }
 
@@ -28,61 +27,37 @@ ul {
     }
 }
 
-// strikethrough text
-.strike {
+
+// Bottom margin for p, li
+.mb-last-of{
+    p, li {
+        &:last-of-type {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+// Page-border
+#page-border{
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    pointer-events: none;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    border: 8px solid black;
+    z-index: 10;
+}
+
+// Page-top
+#page-top {
+    background-color: white;
     position: relative;
-    word-spacing: 0.2rem;
-    letter-spacing: 0.5rem;
-    user-select: none;
-
-    &:before {
-        content:"";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: calc(50% + 0.1rem);
-        border-bottom: 0.25rem solid currentColor;
-        width: 100%;
-        background-color: var(--bs-body-bg);
-        pointer-events: none; 
-    }
-
-    &:after {
-        content: attr(data-title);
-        position: absolute;
-        left: 0;
-        top: -0.1rem;
-        width: 100%;
-        height: 50%;
-        color: inherit;
-        overflow: hidden;
-        padding-left: 9px;
-        pointer-events: none; 
-    }
-}
-
-a.strike {
-    span {
-        opacity: 0;
-    }
-
-    &:before {
-        opacity: 1;
-    }
-
-    &:after {
-        opacity: 0;
-    }
-
-    &:hover span {
-        opacity: 1;
-    }
-
-    &:hover:before {
-        opacity: 1;
-    }
-
-    &:hover:after {
-        opacity: 1;
-    }
-}
+    width: 100%;
+    min-height: 100vh;
+    bottom: 0;
+    left: 0;
+    top: 0;
+};

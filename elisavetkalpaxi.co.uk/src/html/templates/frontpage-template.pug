@@ -6,8 +6,12 @@ html(lang='en')
 
     block html-body
 
-        body#page-top
+        body
+            
+            #page-border
 
-            block main-content
+            #page-top
 
-            include ../partials/footer.pug
+                block main-content
+
+        include ../partials/footer.pug
