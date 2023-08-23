@@ -17,6 +17,12 @@ pnpm install -g local-web-server
 
 // mac: local server?
 
+// Setup github
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+
 ### Usage
 
 Clone the source files of the theme and navigate into the theme's root directory. 
