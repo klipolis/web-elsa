@@ -9,11 +9,15 @@ $red:     #ff4a25 !default;
 $yellow:  #f3e231 !default;
 $green:   #36bf36 !default;
 $blue:    #25a1ff !default;
+$dark:      #000 !default;
 // scss-docs-end color-variables
+
 
 // Override primary color
 $primary: $orange;
 
+// Border dark
+$border-color: #000;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
@@ -23,3 +27,5 @@ $min-contrast-ratio: 3;
 $list-group-border-width: 0;
 $list-group-active-color: #000;
 $list-group-active-bg: transparent;
+
+

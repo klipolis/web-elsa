@@ -1,18 +1,16 @@
 {
     "title": "Elsa Kalpaxi",
     "name": "elsakalpaxi.co.uk",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "scripts": {
-        "build": "pnpm run clean && pnpm run build:pug && pnpm run build:scss && pnpm run build:scripts && pnpm run build:assets",
+        "build": "pnpm run clean && pnpm run build:html && pnpm run build:styles && pnpm run build:scripts && pnpm run build:assets",
         "build:assets": "node scripts/build-assets.js",
-        "build:pug": "node scripts/build-pug.js",
+        "build:html": "node scripts/build-html.js",
         "build:scripts": "node scripts/build-scripts.js",
-        "build:scss": "node scripts/build-scss.js",
-        "clean": "node scripts/clean.js",
-        "start": "pnpm run build && node scripts/start.js",
-        "start:debug": "pnpm run build && node scripts/start-debug.js"
+        "build:styles": "node scripts/build-styles.js",
+        "clean": "node scripts/clean.js"
     },
-    "description": "Creative is a stylish one page HTML theme built with Bootstrap.",
+    "description": "Creative stylish HTML theme built with Bootstrap.",
     "keywords": [
         "css",
         "sass",
@@ -42,9 +40,6 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.4.14",
-        "browser-sync": "^2.29.3",
-        "chokidar": "^3.5.3",
-        "concurrently": "^6.5.1",
         "jstransformer-markdown-it": "^3.0.0",
         "postcss": "^8.4.27",
         "prettier": "^2.8.8",
