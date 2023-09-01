@@ -23,7 +23,7 @@
         display: inline-block;
         left: 0;
         top: 0;
-        height: calc(50% + 0.1rem);
+        height: calc(50% - 0.1rem);
         border-bottom: 0.25rem solid currentColor;
         width: 100%;
         background-color: var(--bs-body-bg);
