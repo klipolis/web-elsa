@@ -13,27 +13,47 @@ append main-content
         .row.g-4.gx-lg-5
                 
             .col.mt-0
+                
+                h3.mt-3.mb-2 Red Sea
+                p Posters, 42 x 59.5 cm. 
 
-                img(
+                img.mb-3(
                     src='assets/img/RedSea.jpg'
                     alt='...', style='max-width:70%'
                 )
-
-                h3.mt-3.mb-2 Red Sea
+               
+                
 
         .clearfix
-
             :markdown-it
             
-                Red Sea consists of a stack of 500 posters that were available to visitors for free in Call/Köl showroom during Deptford X festival. The work was created in response to the ongoing refugee crisis and the thousands of people who lost their lives at sea in the last 15 years. Fly-posting glue was made available outside the showroom. The work is accompanied by ‘A Short Story from Lesvos Island', a story from 'Walking Together: Collection of Short Stories on the Refugees’ Right to the City' that was kindly selected by the book's editor, Charalampos Tsavdaroglou, to accompany the exhibition. 
+                Red Sea consists of a stack of 500 posters that were available to visitors for free in Call/Köl showroom during Deptford X festival. The original artwork, a screeprint of a beach on the Lybian Sea, was created in response to the ongoing refugee crisis and the thousands of people who lost their lives at sea in the last 15 years. Fly-posting glue was made available outside the showroom. The work is accompanied by ‘A Short Story from Lesvos Island', a story from 'Walking Together: Collection of Short Stories on the Refugees’ Right to the City' that was kindly selected by the book's editor, Charalampos Tsavdaroglou, to accompany the exhibition. 
 
                 Tsavdaroglou, C., Giannopoulou, C., Lafazani O., Petropoulou C. and Pistikos I. (eds.) (2020). Walking Together. Collection of Short Stories on the Refugees’ Right to the City. Thessaloniki-Mytilene: Invisible Cities.
 
                 The entire book is available through this link: [https://aoratespoleis.files.wordpress.com/2020/07/walking-together.pdf](https://aoratespoleis.files.wordpress.com/2020/07/walking-together.pdf)
 
             <br>
-                <br>
-                <br>
+    // Portfolio
+    .container-md.mt-5
+            
+            h3 Skies
+            p Monoprints, 42 x 59.5 cm. 
+
+            - var files = ['KalpaxiSkies1','KalpaxiSkies2','KalpaxiSkies3','KalpaxiSkies4','KalpaxiSkies5','KalpaxiSkies6','KalpaxiSkies7','KalpaxiSkies8','KalpaxiSkies9','KalpaxiSkies10','KalpaxiSkies11','KalpaxiSkies12'] 
+
+            .row.gallery.g-1.g-sm-2.g-md-3.mb-3.justify-content-evenly.row-cols-3.row-cols-sm-auto
+
+                each value, index in files
+                    .col-auto.mw-50
+                        a.thumbnail(href='assets/img/'+value+'.jpg', title='')
+                            img.img-fluid(src='assets/img/'+value+'\_small.jpg', alt='')
+              
+            p Skies is a series of monoprints that I have been working on since 2021. The images are produced by manually mixing intaglio ink on an acrylic plate and then pressing the plate on paper through an etching press. The series is inspired by the sky and its various expressions. The meditative, repetitive process of making the prints, and circular movement of mixing the paint, are important factors in the work and my enduring engagement with it. Similarly, the aim of the resulting images is to absorb the viewer in the images’ hazy atmospheres. Some of these prints were presented in XXII International Print Biennial Varna, Bulgaria, in 2023.
+            <br>
+            <br>
+            <br>
+
     .container-md
         .row.g-4.gx-lg-5
                 
@@ -65,7 +85,7 @@ append main-content
                 The first round of ‘Dialogues’ in July 2022, curated by Elisavet Kalpaxi with the valuable help of Konstantinos Panapakidis, sought to instigate a dialogue between eight artists. The participating artist exchanged artworks and installed them in their personal spaces for a period of 10 days. During that period the artworks were publicly available on this site through relevant documentation and live streaming events (Dialogues #1). 
 
                 Alongside the virtual exhibition, the project involved a series of discussions between the artists to enable further interactions and reflections. Part of this, was the decision to invite more artists to form their own rounds of dialogues. We created an instructional booklet, our ‘formula’, which describes all the processes involved in making the project, and which can be found on the menu of this site. It is envisioned that some new rounds of Dialogues will be instigated in July every year, with a shared opening event. But the formula is available for appropriation according to the participants’ priorities.
-
+            <br>
 
     // Portfolio
     .container-md.mt-5
