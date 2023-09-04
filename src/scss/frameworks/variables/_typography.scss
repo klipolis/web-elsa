@@ -5,11 +5,15 @@
 
 // Custom Font
 @font-face {
-    font-family: 'Just My Type';
-    src: url('../assets/font/JustMyType.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Just My Type";
+    src: url("https://db.onlinewebfonts.com/t/d8e274403725cabcf56a1b6449c81143.eot");
+    src: url("https://db.onlinewebfonts.com/t/d8e274403725cabcf56a1b6449c81143.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d8e274403725cabcf56a1b6449c81143.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d8e274403725cabcf56a1b6449c81143.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d8e274403725cabcf56a1b6449c81143.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d8e274403725cabcf56a1b6449c81143.svg#Just My Type")format("svg");
 }
+
 
 
 $font-family-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
